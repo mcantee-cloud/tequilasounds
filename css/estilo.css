@@ -1,0 +1,295 @@
+:root {
+  --rosa: #ff6fcf;
+  --morado: #7a00b3;
+  --negro: #0c0c0c;
+  --verde: #9effdb;
+  --gris: #1e1e1e;
+  --sombra: rgba(255, 111, 207, 0.3);
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--negro);
+  color: white;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(90deg, var(--morado), #4a007d);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+}
+header .logo img {
+  height: 55px;
+  margin-right: 12px;
+  transition: transform 0.3s ease;
+}
+header .logo img:hover {
+  transform: scale(1.1);
+}
+nav a {
+  color: var(--verde);
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: var(--rosa);
+}
+
+/* INTRO */
+.intro {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, var(--morado), var(--negro));
+  box-shadow: inset 0 0 40px var(--sombra);
+}
+.intro h1 {
+  font-size: 2.5rem;
+  color: var(--rosa);
+}
+.intro p {
+  font-size: 1.2rem;
+  color: var(--verde);
+  margin-top: 10px;
+}
+
+/* PRODUCTOS */
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 60px 30px;
+  gap: 35px;
+}
+.producto {
+  background: var(--gris);
+  border-radius: 12px;
+  width: 280px;
+  text-align: center;
+  padding: 25px;
+  box-shadow: 0 0 15px var(--sombra);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px var(--rosa);
+}
+.producto img {
+  width: 100%;
+  border-radius: 10px;
+}
+.producto h3 {
+  color: var(--verde);
+  margin: 15px 0;
+}
+.producto a {
+  background: var(--rosa);
+  color: black;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+.producto a:hover {
+  background: var(--verde);
+}
+
+/* FORMULARIOS */
+.form-container {
+  width: 90%;
+  max-width: 400px;
+  margin: 60px auto;
+  background: var(--gris);
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px var(--morado);
+}
+.form-container input,
+.form-container button,
+.form-container select {
+  width: 100%;
+  margin: 12px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.form-container input {
+  background: #111;
+  color: white;
+}
+.form-container button {
+  background: var(--rosa);
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+.form-container button:hover {
+  background: var(--verde);
+  transform: scale(1.03);
+}
+.msg {
+  text-align: center;
+  color: var(--verde);
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* ADMIN */
+.admin-title {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.8rem;
+  color: var(--rosa);
+}
+.admin-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+.admin-links a {
+  background: var(--rosa);
+  color: black;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.admin-links a:hover {
+  background: var(--verde);
+  transform: translateY(-3px);
+}
+
+/* TABLAS */
+table {
+  border-collapse: collapse;
+  margin: 40px auto;
+  width: 95%;
+  background-color: #1a1a1a;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px var(--sombra);
+}
+th {
+  background: var(--morado);
+  color: var(--verde);
+  padding: 12px;
+  text-transform: uppercase;
+}
+td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+tr:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* SELECT */
+select {
+  background: var(--morado);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+}
+select:focus {
+  outline: 2px solid var(--rosa);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav {
+    margin-top: 10px;
+  }
+  .productos {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.reserva-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 60px auto;
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px var(--morado);
+  text-align: center;
+}
+
+.reserva-container h2 {
+  color: var(--verde);
+  margin-bottom: 20px;
+}
+
+.form-reserva label {
+  display: block;
+  text-align: left;
+  margin-top: 15px;
+  font-weight: bold;
+  color: var(--rosa);
+}
+
+.form-reserva input,
+.form-reserva select,
+.form-reserva button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-reserva input,
+.form-reserva select {
+  background: #2b2b2b;
+  color: white;
+}
+
+.form-reserva input:focus,
+.form-reserva select:focus {
+  outline: 2px solid var(--rosa);
+}
+
+.form-reserva button {
+  background: var(--rosa);
+  color: black;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-reserva button:hover {
+  background: var(--verde);
+}
