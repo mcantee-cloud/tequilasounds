@@ -1,11 +1,7 @@
-# Imagen base de PHP + Apache
 FROM php:8.2-apache
 
-# Copia tu proyecto al servidor web
+# Copiar todos los archivos del proyecto al servidor web de Apache
 COPY . /var/www/html/
 
-# Configura permisos
-RUN chown -R www-data:www-data /var/www/html
-
-# Expone el puerto
+# Exponer el puerto donde corre Apache
 EXPOSE 80
