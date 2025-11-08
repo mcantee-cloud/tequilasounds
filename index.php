@@ -8,19 +8,19 @@
 
 <section class="productos">
     <div class="producto">
-        <img src="img/productos/rentas.jpg" alt="Renta de Audio">
+        <img src="/img/productos/rentas.jpg" alt="Renta de Audio">
         <h3>Renta de Audio</h3>
-        <a href="reserva.php?servicio=renta">Reservar</a>
+        <a href="/reserva.php?servicio=renta">Reservar</a>
     </div>
     <div class="producto">
-        <img src="img/productos/solista.jpg" alt="Solista">
+        <img src="/img/productos/solista.jpg" alt="Solista">
         <h3>Cantantes Solistas</h3>
-        <a href="reserva.php?servicio=solista">Reservar</a>
+        <a href="/reserva.php?servicio=solista">Reservar</a>
     </div>
     <div class="producto">
-        <img src="img/productos/dj.jpg" alt="DJ">
+        <img src="/img/productos/dj.jpg" alt="DJ">
         <h3>DJ Profesional</h3>
-        <a href="reserva.php?servicio=dj">Reservar</a>
+        <a href="/reserva.php?servicio=dj">Reservar</a>
     </div>
 </section>
-<?php include 'includes/footer.php'; ?>
+<?php include '/includes/footer.php'; ?>
