@@ -1,17 +1,11 @@
-# Imagen base oficial de PHP con Apache
+# Imagen base de PHP + Apache
 FROM php:8.2-apache
 
-# Copiar todos los archivos del proyecto al servidor Apache
+# Copia tu proyecto al servidor web
 COPY . /var/www/html/
 
-# Habilitar extensiones PHP necesarias (opcional)
-RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
-
-# Dar permisos a la carpeta del sitio
+# Configura permisos
 RUN chown -R www-data:www-data /var/www/html
 
-# Exponer el puerto 80 para HTTP
+# Expone el puerto
 EXPOSE 80
-
-# Iniciar Apache
-CMD ["apache2-foreground"]
